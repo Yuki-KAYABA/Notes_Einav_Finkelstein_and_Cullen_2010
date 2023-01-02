@@ -1,0 +1,68 @@
+---
+title: "Handel (2013) Adverse Selection and Inertia in Health Insurance Markets: When Nudging Hurts"
+author: "Yuki KAYABA"
+date: '2023-01-02'
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+#output_dir: docs
+#bookdown::gitbook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(bookdown)
+```
+
+# Summary of the Paper
+
+（ひとことメモ）
+
+- 保険マーケットにおける諸問題のうち、InertiaとAdverse Selectionの関係に注目した論文。
+- いずれも保険マーケットの効率性を損なう問題として捉えられているが、両者には「Inertiaを減らして消費者が良い選択をできるようにするほどAdverse Selectionを助長する」という関係がある。
+- そのため、（何らかの）NudgeによりInertiaを減らすことで、かえって経済厚生を損なう可能性がある。
+
+## Motivation
+
+- Investigate consumer inertia in health insurance markets.
+- Potential concern of insurance markets:
+  - Adverse Selection
+  - Moral Hazard (hardly discussed in this paper)
+  - Inertia: consumers are reluctant to make active choices
+- Focus on the relationship between adverse selection and inertia.
+- To do so, a choice model is developed and estimated, and using these estimates counterfactual simulation is conducted to study the impact of policies that nudge consumer toward better decisions by reducing inertia.
+- The improved choices substantially exacerbate adverse selection, leading to an overall reduction in welfare ("When Nudging Hurts").
+
+## Related Literature
+- あとで
+
+## Contribution
+- あとで
+
+# Details of the Paper
+
+## Preliminary Analysis
+
+## Model
+
+- Choice Model: consumer's choice conditional on predicted family-level ex ante medical cost risk
+- Cost Model: generates the expenditure distributions
+
+### Choice Model
+- $k \in \mathcal{K}$: a family unit
+- $j \in \mathcal{J}$: one of the three PPO insurance plans available after the $t_{0}$ menu change
+- $t \in \mathcal{T}$: one of the three years from $t_{0}$ to $t_{2}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
