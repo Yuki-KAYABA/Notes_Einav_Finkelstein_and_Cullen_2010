@@ -52,17 +52,40 @@ library(bookdown)
 - $k \in \mathcal{K}$: a family unit
 - $j \in \mathcal{J}$: one of the three PPO insurance plans available after the $t_{0}$ menu change
 - $t \in \mathcal{T}$: one of the three years from $t_{0}$ to $t_{2}$
+- $F_{kjt}(\cdot)$: family-plan-time specific distributions of out-of-pocket health expenditures (output by the cost model)
+
+- Each family has the following latent, v-NM expected utility:
+$$
+U_{kjt} = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(W_{k}, OOP, P_{kjt}, 1_{kj, t-1})dOOP,
+$$
+- $OOP$: a realization of medical expenses from $F_{kjt}(\cdot)$
+- $W_{k}$: family-specific wealth
+- $P_{kjt}$: family-time-specific premium contribution for plan $j$
+- $1_{kj, t-1}$: an indicator of whether the family was enrolled in plan $j$ in the previous time period
+- $u_{k}(\cdot)$: v-NM utility index and assumed to be CARA preferences:
+$$
+u_{k}(x) = - \frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})}e^{\gamma_{k}(\mathbf{X}^{A}_{k})x}.
+$$
+- $\gamma_{k}$ is a family-specific preference parameter that is known to the family but unobserved to the econometrician
+- A family's overall level of consumption $x$ conditional on $OOP$ from $F_{kjt}(\cdot)$:
+$$
+x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta_{k}(Y_{k})1_{1200} + \alpha H_{k, t-1}1_{250} + \epsilon_{kjt}(Y_{k})
+$$
+
+### Cost Model
+
+- Leverage the Johns Hopkins ACG Case-Mix software package
+- For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year
+- Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year
+- Combine individual total expense projections into the family out-of-pocket expense projections used in the choice model $F_{kjt}$
+
+The cost model assumes that there is no private information and no moral hazard (total expenditures do not vary with $j$). While both of these phenomena have the potential to be important in health care markets, these assumptions are believed to have less impact the results, relative to inertia.
+
+### Identification
 
 
 
+## Estimation
 
 
-
-
-
-
-
-
-
-
-
+## Estimation Results

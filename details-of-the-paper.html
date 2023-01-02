@@ -80,7 +80,11 @@
 <li class="chapter" data-level="2.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.2</b> Model</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#choice-model"><i class="fa fa-check"></i><b>2.2.1</b> Choice Model</a></li>
+<li class="chapter" data-level="2.2.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#cost-model"><i class="fa fa-check"></i><b>2.2.2</b> Cost Model</a></li>
+<li class="chapter" data-level="2.2.3" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#identification"><i class="fa fa-check"></i><b>2.2.3</b> Identification</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation"><i class="fa fa-check"></i><b>2.3</b> Estimation</a></li>
+<li class="chapter" data-level="2.4" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation-results"><i class="fa fa-check"></i><b>2.4</b> Estimation Results</a></li>
 </ul></li>
 </ul>
 
@@ -113,11 +117,48 @@
 <div id="choice-model" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Choice Model<a href="details-of-the-paper.html#choice-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><span class="math inline">\(k \in \mathcal{K}\)</span>: a family unit</li>
-<li><span class="math inline">\(j \in \mathcal{J}\)</span>: one of the three PPO insurance plans available after the <span class="math inline">\(t_{0}\)</span> menu change</li>
-<li><span class="math inline">\(t \in \mathcal{T}\)</span>: one of the three years from <span class="math inline">\(t_{0}\)</span> to <span class="math inline">\(t_{2}\)</span></li>
+<li><p><span class="math inline">\(k \in \mathcal{K}\)</span>: a family unit</p></li>
+<li><p><span class="math inline">\(j \in \mathcal{J}\)</span>: one of the three PPO insurance plans available after the <span class="math inline">\(t_{0}\)</span> menu change</p></li>
+<li><p><span class="math inline">\(t \in \mathcal{T}\)</span>: one of the three years from <span class="math inline">\(t_{0}\)</span> to <span class="math inline">\(t_{2}\)</span></p></li>
+<li><p><span class="math inline">\(F_{kjt}(\cdot)\)</span>: family-plan-time specific distributions of out-of-pocket health expenditures (output by the cost model)</p></li>
+<li><p>Each family has the following latent, v-NM expected utility:
+<span class="math display">\[
+U_{kjt} = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(W_{k}, OOP, P_{kjt}, 1_{kj, t-1})dOOP,
+\]</span></p></li>
+<li><p><span class="math inline">\(OOP\)</span>: a realization of medical expenses from <span class="math inline">\(F_{kjt}(\cdot)\)</span></p></li>
+<li><p><span class="math inline">\(W_{k}\)</span>: family-specific wealth</p></li>
+<li><p><span class="math inline">\(P_{kjt}\)</span>: family-time-specific premium contribution for plan <span class="math inline">\(j\)</span></p></li>
+<li><p><span class="math inline">\(1_{kj, t-1}\)</span>: an indicator of whether the family was enrolled in plan <span class="math inline">\(j\)</span> in the previous time period</p></li>
+<li><p><span class="math inline">\(u_{k}(\cdot)\)</span>: v-NM utility index and assumed to be CARA preferences:
+<span class="math display">\[
+u_{k}(x) = - \frac{1}{\gamma_{k}(\mathbf{X}^{A}_{k})}e^{\gamma_{k}(\mathbf{X}^{A}_{k})x}.
+\]</span></p></li>
+<li><p><span class="math inline">\(\gamma_{k}\)</span> is a family-specific preference parameter that is known to the family but unobserved to the econometrician</p></li>
+<li><p>A family’s overall level of consumption <span class="math inline">\(x\)</span> conditional on <span class="math inline">\(OOP\)</span> from <span class="math inline">\(F_{kjt}(\cdot)\)</span>:
+<span class="math display">\[
+x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta_{k}(Y_{k})1_{1200} + \alpha H_{k, t-1}1_{250} + \epsilon_{kjt}(Y_{k})
+\]</span></p></li>
 </ul>
 </div>
+<div id="cost-model" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Cost Model<a href="details-of-the-paper.html#cost-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Leverage the Johns Hopkins ACG Case-Mix software package</li>
+<li>For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year</li>
+<li>Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year</li>
+<li>Combine individual total expense projections into the family out-of-pocket expense projections used in the choice model <span class="math inline">\(F_{kjt}\)</span></li>
+</ul>
+<p>The cost model assumes that there is no private information and no moral hazard (total expenditures do not vary with <span class="math inline">\(J\)</span>). While both of these phenomena have the potential to be important in health care markets, these assumptions are believed to have less impact the results, relative to inertia.</p>
+</div>
+<div id="identification" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Identification<a href="details-of-the-paper.html#identification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="estimation" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Estimation<a href="details-of-the-paper.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="estimation-results" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
 </div>
             </section>
