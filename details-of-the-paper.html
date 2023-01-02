@@ -107,6 +107,17 @@
 <h1><span class="header-section-number">2</span> Details of the Paper<a href="details-of-the-paper.html#details-of-the-paper" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="preliminary-analysis" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Preliminary Analysis<a href="details-of-the-paper.html#preliminary-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>New Employees</li>
+</ol>
+<ul>
+<li>Compare the choices over time of the cohorts of new enrollees from years <span class="math inline">\(t_{−1}\)</span>, <span class="math inline">\(t_{0}\)</span>, and <span class="math inline">\(t_{1}\)</span>.</li>
+<li>Results: while it is evident that the <span class="math inline">\(t_{0}\)</span> and <span class="math inline">\(t_{−1}\)</span> cohorts make very similar choices with the default option at <span class="math inline">\(t_{1}\)</span>, the new enrollees making active choices in that year have a very different choice profile that reflects the price changes for <span class="math inline">\(t_{1}\)</span>.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Dominated Plan Choice</p></li>
+<li><p>Adverse Selection</p></li>
+</ol>
 </div>
 <div id="model" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Model<a href="details-of-the-paper.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -142,13 +153,12 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 </div>
 <div id="cost-model" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Cost Model<a href="details-of-the-paper.html#cost-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Leverage the Johns Hopkins ACG Case-Mix software package</li>
-<li>For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year</li>
-<li>Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year</li>
-<li>Combine individual total expense projections into the family out-of-pocket expense projections used in the choice model <span class="math inline">\(F_{kjt}\)</span></li>
-</ul>
-<p>The cost model assumes that there is no private information and no moral hazard (total expenditures do not vary with <span class="math inline">\(J\)</span>). While both of these phenomena have the potential to be important in health care markets, these assumptions are believed to have less impact the results, relative to inertia.</p>
+<p>The cost model is developed and estimated the following procedure:
+- Leverage the Johns Hopkins ACG Case-Mix software package
+- For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year
+- Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year
+- Combine individual total expense projections into the family out-of-pocket expense projections used in the choice model <span class="math inline">\(F_{kjt}\)</span></p>
+<p>The cost model assumes that there is no private information and no moral hazard (total expenditures do not vary with <span class="math inline">\(j\)</span>). While both of these phenomena have the potential to be important in health care markets, these assumptions are believed to have less impact the results, relative to inertia.</p>
 </div>
 <div id="identification" class="section level3 hasAnchor" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Identification<a href="details-of-the-paper.html#identification" class="anchor-section" aria-label="Anchor link to header"></a></h3>

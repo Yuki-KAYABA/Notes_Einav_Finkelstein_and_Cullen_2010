@@ -43,6 +43,15 @@ library(bookdown)
 
 ## Preliminary Analysis
 
+1. New Employees
+- Compare the choices over time of the cohorts of new enrollees from years $t_{−1}$, $t_{0}$, and $t_{1}$.
+- Results: while it is evident that the $t_{0}$ and $t_{−1}$ cohorts make very similar choices with the default option at $t_{1}$, the new enrollees making active choices in that year have a very different choice profile that reflects the price changes for $t_{1}$.
+
+2. Dominated Plan Choice
+
+3. Adverse Selection
+
+
 ## Model
 
 - Choice Model: consumer's choice conditional on predicted family-level ex ante medical cost risk
@@ -74,6 +83,7 @@ $$
 
 ### Cost Model
 
+The cost model is developed and estimated the following procedure:
 - Leverage the Johns Hopkins ACG Case-Mix software package
 - For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year
 - Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year
