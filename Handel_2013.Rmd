@@ -34,10 +34,11 @@ library(bookdown)
 - The improved choices substantially exacerbate adverse selection, leading to an overall reduction in welfare ("When Nudging Hurts").
 
 ## Related Literature
-- あとで
+- Farrell and Klemperer (2007): survey related work on switching costs and discuss how the inability of researchers to observe active or initial choices within a micro-level panel dataset confounds their ability to separately identify switching costs from persistent unobserved preference heterogeneity.
 
 ## Contribution
-- あとで
+- Explicitly quantify the value of inertia and other micro-foundations
+- Use those estimates to study the interaction between inertia and adverse selection
 
 # Details of the Paper
 
@@ -48,9 +49,13 @@ library(bookdown)
 - Results: while it is evident that the $t_{0}$ and $t_{−1}$ cohorts make very similar choices with the default option at $t_{1}$, the new enrollees making active choices in that year have a very different choice profile that reflects the price changes for $t_{1}$.
 
 2. Dominated Plan Choice
+- leverages a specific situation caused by the combination of plan characteristics and plan price changes in our setting. 
+- As a result of the large price changes for year $t_{1}$, $PPO_{250}$ became _strictly dominated_ for certain combinations of family size and income, which determine employee premium contributions.
+- Without inertia, employees must switch their options to monetary advantageous one.
+- Results show that only a fraction of employees change their insurance option.
 
 3. Adverse Selection
-
+- The more the employees are riskier, the more likely they enroll in more comprehensive plan.
 
 ## Model
 
@@ -84,6 +89,7 @@ $$
 ### Cost Model
 
 The cost model is developed and estimated the following procedure:
+
 - Leverage the Johns Hopkins ACG Case-Mix software package
 - For each individual and open enrollment period, we use the past year of diagnoses, drugs and expenses, along with age, gender, to predict mean total expenditures for the upcoming year
 - Grouping individuals into cells based on mean predicted future utilization, estimate a spending distribution for the upcoming year
