@@ -44,6 +44,8 @@ library(bookdown)
 
 ## Preliminary Analysis
 
+Descriptive analysis to see the existence of inertia and adverse selection.
+
 1. New Employees
 - Compare the choices over time of the cohorts of new enrollees from years $t_{−1}$, $t_{0}$, and $t_{1}$.
 - Results: while it is evident that the $t_{0}$ and $t_{−1}$ cohorts make very similar choices with the default option at $t_{1}$, the new enrollees making active choices in that year have a very different choice profile that reflects the price changes for $t_{1}$.
@@ -99,7 +101,16 @@ The cost model assumes that there is no private information and no moral hazard 
 
 ### Identification
 
+The model separately identify inertia from persistent unobserved preference heterogeneity by leveraging three features of the data and environment.
 
+- The plan menu change and forced re-enrollment at year $t_{0}$ ensures that we observe each family in our final sample making both an “active” and a “passive” choice from the same set of health plans over time, in the context of meaningful relative price changes
+- The three $PPO$ plan options we study have the exact same network of medical providers and cover the same medical services, implying that differentiation occurs only through preferences for plan financial characteristics (here, risk preferences)
+- Since insurance choice here is effectively a choice between different financial lotteries, our detailed medical data allow us to precisely quantify health risk and the ex ante value consumers should have for health plans, con- ditional on risk preferences and the assumption that beliefs conform to $F_{kjt}$
+
+We separately identify the two sources of persistent preference heterogeneity $\gamma$ (risk preferences) and $\delta$ ($PPO_{1200}$ differentiation) by leveraging the structure of the three available choices.
+
+- $\gamma$ is identified by the choice between $PPO_{250}$ and $PPO_{500}$, which are not horizontally differentiated
+- $\delta$ is identified by examining the choice between the nest of those two plans and $PPO_{1200}$
 
 ## Estimation
 

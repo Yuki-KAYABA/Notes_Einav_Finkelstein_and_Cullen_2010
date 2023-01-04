@@ -107,6 +107,7 @@
 <h1><span class="header-section-number">2</span> Details of the Paper<a href="details-of-the-paper.html#details-of-the-paper" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="preliminary-analysis" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Preliminary Analysis<a href="details-of-the-paper.html#preliminary-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Descriptive analysis to see the existence of inertia and adverse selection.</p>
 <ol style="list-style-type: decimal">
 <li>New Employees</li>
 </ol>
@@ -175,6 +176,17 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 </div>
 <div id="identification" class="section level3 hasAnchor" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Identification<a href="details-of-the-paper.html#identification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The model separately identify inertia from persistent unobserved preference heterogeneity by leveraging three features of the data and environment.</p>
+<ul>
+<li>The plan menu change and forced re-enrollment at year <span class="math inline">\(t_{0}\)</span> ensures that we observe each family in our final sample making both an “active” and a “passive” choice from the same set of health plans over time, in the context of meaningful relative price changes</li>
+<li>The three <span class="math inline">\(PPO\)</span> plan options we study have the exact same network of medical providers and cover the same medical services, implying that differentiation occurs only through preferences for plan financial characteristics (here, risk preferences)</li>
+<li>since insurance choice here is effectively a choice between different financial lotteries, our detailed medical data allow us to precisely quantify health risk and the ex ante value consumers should have for health plans, con- ditional on risk preferences and the assumption that beliefs conform to <span class="math inline">\(F_{kjt}\)</span></li>
+</ul>
+<p>We separately identify the two sources of persistent preference heterogeneity <span class="math inline">\(\gamma\)</span> (risk preferences) and <span class="math inline">\(\delta\)</span> (<span class="math inline">\(PPO_{1200}\)</span> differentiation) by leveraging the structure of the three available choices.</p>
+<ul>
+<li><span class="math inline">\(\gamma\)</span> is identified by the choice between <span class="math inline">\(PPO_{250}\)</span> and <span class="math inline">\(PPO_{500}\)</span>, which are not horizontally differentiated</li>
+<li><span class="math inline">\(\delta\)</span> is identified by examining the choice between the nest of those two plans and <span class="math inline">\(PPO_{1200}\)</span></li>
+</ul>
 </div>
 </div>
 <div id="estimation" class="section level2 hasAnchor" number="2.3">
