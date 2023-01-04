@@ -180,7 +180,7 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 <ul>
 <li>The plan menu change and forced re-enrollment at year <span class="math inline">\(t_{0}\)</span> ensures that we observe each family in our final sample making both an “active” and a “passive” choice from the same set of health plans over time, in the context of meaningful relative price changes</li>
 <li>The three <span class="math inline">\(PPO\)</span> plan options we study have the exact same network of medical providers and cover the same medical services, implying that differentiation occurs only through preferences for plan financial characteristics (here, risk preferences)</li>
-<li>since insurance choice here is effectively a choice between different financial lotteries, our detailed medical data allow us to precisely quantify health risk and the ex ante value consumers should have for health plans, con- ditional on risk preferences and the assumption that beliefs conform to <span class="math inline">\(F_{kjt}\)</span></li>
+<li>Since insurance choice here is effectively a choice between different financial lotteries, our detailed medical data allow us to precisely quantify health risk and the ex ante value consumers should have for health plans, con- ditional on risk preferences and the assumption that beliefs conform to <span class="math inline">\(F_{kjt}\)</span></li>
 </ul>
 <p>We separately identify the two sources of persistent preference heterogeneity <span class="math inline">\(\gamma\)</span> (risk preferences) and <span class="math inline">\(\delta\)</span> (<span class="math inline">\(PPO_{1200}\)</span> differentiation) by leveraging the structure of the three available choices.</p>
 <ul>
@@ -191,6 +191,17 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 </div>
 <div id="estimation" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Estimation<a href="details-of-the-paper.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Assume that the random coefficient <span class="math inline">\(\gamma_{k}\)</span> is normally distributed with a mean that is linearly related to observable characteristics <span class="math inline">\(\mathbf{X}^{A}_{k}\)</span>:
+<span class="math display">\[
+\gamma_{k}(\mathbf{X}^{A}_{k}) \rightarrow N(\mu_{\gamma}(\mathbf{X}^{A}_{k}), \sigma^{2}_{\gamma}) \\
+\mu_{\gamma}(\mathbf{X}^{A}_{k}) = \mu + \mathbf{\beta}(\mathbf{X}^{A}_{k})
+\]</span></li>
+<li>Inertia, <span class="math inline">\(\eta(\mathbf{X}^{B}_{kt}, Y_{k})\)</span>, is related linearly to <span class="math inline">\(Y_{k}\)</span> and linked choices and demographics <span class="math inline">\(\mathbf{X}^{B}_{kt}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\eta(\mathbf{X}^{B}_{kt}, Y_{k}) = \eta_{0} + \mathbf{\eta}_{1}\mathbf{X}^{B}_{kt} + \eta_{2}Y_{k}
+\]</span></p>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>

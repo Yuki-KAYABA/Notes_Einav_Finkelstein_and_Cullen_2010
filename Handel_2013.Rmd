@@ -114,5 +114,28 @@ We separately identify the two sources of persistent preference heterogeneity $\
 
 ## Estimation
 
+- Assume that the random coefficient $\gamma_{k}$ is normally distributed with a mean that is linearly related to observable characteristics $\mathbf{X}^{A}_{k}$:
+$$
+\gamma_{k}(\mathbf{X}^{A}_{k}) \rightarrow N(\mu_{\gamma}(\mathbf{X}^{A}_{k}), \sigma^{2}_{\gamma}) \\
+\mu_{\gamma}(\mathbf{X}^{A}_{k}) = \mu + \mathbf{\beta}(\mathbf{X}^{A}_{k})
+$$
+- Inertia, $\eta(\mathbf{X}^{B}_{kt}, Y_{k})$, is related linearly to $Y_{k}$ and linked choices and demographics $\mathbf{X}^{B}_{kt}$
+
+$$
+\eta(\mathbf{X}^{B}_{kt}, Y_{k}) = \eta_{0} + \mathbf{\eta}_{1}\mathbf{X}^{B}_{kt} + \eta_{2}Y_{k}
+$$
 
 ## Estimation Results
+
+
+
+
+
+
+
+
+
+
+
+
+
