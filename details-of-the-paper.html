@@ -191,6 +191,7 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 </div>
 <div id="estimation" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Estimation<a href="details-of-the-paper.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Statistical Assumptions</strong></p>
 <ul>
 <li><p>Assume that the random coefficient <span class="math inline">\(\gamma_{k}\)</span> is normally distributed with a mean that is linearly related to observable characteristics <span class="math inline">\(\mathbf{X}^{A}_{k}\)</span>:
 <span class="math display">\[
@@ -205,6 +206,11 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 \]</span></p>
 <ul>
 <li>Assume that the family-plan-time specific error terms <span class="math inline">\(\epsilon_{kjt}\)</span> are i.i.d. normal for each j with zero mean and variances <span class="math inline">\(\sigma^{2}_{\epsilon_{j}}(Y_{k})\)</span></li>
+</ul>
+<p><strong>Estimation Method</strong></p>
+<ul>
+<li>Estimate the choice model using a random coefficients simulated maximum likelihood approach similar to that summarized in Train (2009)</li>
+<li>The likelihood function at the family level is computed for a sequence of choices from <span class="math inline">\(t_{0}\)</span> to <span class="math inline">\(t_{2}\)</span>, since inertia implies that the likelihood of a choice made in the current period depends on the previous choice</li>
 </ul>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.4">

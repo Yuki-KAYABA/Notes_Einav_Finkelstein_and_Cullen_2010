@@ -114,7 +114,7 @@ We separately identify the two sources of persistent preference heterogeneity $\
 
 ## Estimation
 
-Add the following statistical assumptions to the model.
+**Statistical Assumptions**
 
 - Assume that the random coefficient $\gamma_{k}$ is normally distributed with a mean that is linearly related to observable characteristics $\mathbf{X}^{A}_{k}$:
 $$
@@ -130,6 +130,11 @@ $$
 $$
 
 - Assume that the family-plan-time specific error terms $\epsilon_{kjt}$ are i.i.d. normal for each j with zero mean and variances $\sigma^{2}_{\epsilon_{j}}(Y_{k})$
+
+**Estimation Method**
+
+- Estimate the choice model using a random coefficients simulated maximum likelihood approach similar to that summarized in Train (2009)
+- The likelihood function at the family level is computed for a sequence of choices from $t_{0}$ to $t_{2}$, since inertia implies that the likelihood of a choice made in the current period depends on the previous choice
 
 ## Estimation Results
 
