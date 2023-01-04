@@ -23,7 +23,7 @@
 <meta name="author" content="Yuki KAYABA" />
 
 
-<meta name="date" content="2023-01-02" />
+<meta name="date" content="2023-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -192,16 +192,20 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 <div id="estimation" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Estimation<a href="details-of-the-paper.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Assume that the random coefficient <span class="math inline">\(\gamma_{k}\)</span> is normally distributed with a mean that is linearly related to observable characteristics <span class="math inline">\(\mathbf{X}^{A}_{k}\)</span>:
+<li><p>Assume that the random coefficient <span class="math inline">\(\gamma_{k}\)</span> is normally distributed with a mean that is linearly related to observable characteristics <span class="math inline">\(\mathbf{X}^{A}_{k}\)</span>:
 <span class="math display">\[
 \gamma_{k}(\mathbf{X}^{A}_{k}) \rightarrow N(\mu_{\gamma}(\mathbf{X}^{A}_{k}), \sigma^{2}_{\gamma}) \\
 \mu_{\gamma}(\mathbf{X}^{A}_{k}) = \mu + \mathbf{\beta}(\mathbf{X}^{A}_{k})
-\]</span></li>
-<li>Inertia, <span class="math inline">\(\eta(\mathbf{X}^{B}_{kt}, Y_{k})\)</span>, is related linearly to <span class="math inline">\(Y_{k}\)</span> and linked choices and demographics <span class="math inline">\(\mathbf{X}^{B}_{kt}\)</span></li>
+\]</span></p></li>
+<li><p>Denote the mean and variance of <span class="math inline">\(\delta_{k}\)</span>, the random intercept for <span class="math inline">\(PPO_{1200}\)</span>, as <span class="math inline">\(\mu_{\delta}(Y_{k})\)</span> and <span class="math inline">\(\sigma^{2}_{\delta}(Y_{k})\)</span></p></li>
+<li><p>Inertia, <span class="math inline">\(\eta(\mathbf{X}^{B}_{kt}, Y_{k})\)</span>, is related linearly to <span class="math inline">\(Y_{k}\)</span> and linked choices and demographics <span class="math inline">\(\mathbf{X}^{B}_{kt}\)</span></p></li>
 </ul>
 <p><span class="math display">\[
 \eta(\mathbf{X}^{B}_{kt}, Y_{k}) = \eta_{0} + \mathbf{\eta}_{1}\mathbf{X}^{B}_{kt} + \eta_{2}Y_{k}
 \]</span></p>
+<ul>
+<li>Assume that the family-plan-time specific error terms <span class="math inline">\(\epsilon_{kjt}\)</span> are i.i.d. normal for each j with zero mean and variances <span class="math inline">\(\sigma^{2}_{\epsilon_{j}}(Y_{k})\)</span></li>
+</ul>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>

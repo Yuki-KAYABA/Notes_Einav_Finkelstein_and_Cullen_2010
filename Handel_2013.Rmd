@@ -1,7 +1,7 @@
 ---
 title: "Handel (2013) Adverse Selection and Inertia in Health Insurance Markets: When Nudging Hurts"
 author: "Yuki KAYABA"
-date: '2023-01-02'
+date: '2023-01-04'
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook: default
@@ -114,16 +114,22 @@ We separately identify the two sources of persistent preference heterogeneity $\
 
 ## Estimation
 
+Add the following statistical assumptions to the model.
+
 - Assume that the random coefficient $\gamma_{k}$ is normally distributed with a mean that is linearly related to observable characteristics $\mathbf{X}^{A}_{k}$:
 $$
 \gamma_{k}(\mathbf{X}^{A}_{k}) \rightarrow N(\mu_{\gamma}(\mathbf{X}^{A}_{k}), \sigma^{2}_{\gamma}) \\
 \mu_{\gamma}(\mathbf{X}^{A}_{k}) = \mu + \mathbf{\beta}(\mathbf{X}^{A}_{k})
 $$
+
+- Denote the mean and variance of $\delta_{k}$, the random intercept for $PPO_{1200}$, as $\mu_{\delta}(Y_{k})$ and $\sigma^{2}_{\delta}(Y_{k})$
 - Inertia, $\eta(\mathbf{X}^{B}_{kt}, Y_{k})$, is related linearly to $Y_{k}$ and linked choices and demographics $\mathbf{X}^{B}_{kt}$
 
 $$
 \eta(\mathbf{X}^{B}_{kt}, Y_{k}) = \eta_{0} + \mathbf{\eta}_{1}\mathbf{X}^{B}_{kt} + \eta_{2}Y_{k}
 $$
+
+- Assume that the family-plan-time specific error terms $\epsilon_{kjt}$ are i.i.d. normal for each j with zero mean and variances $\sigma^{2}_{\epsilon_{j}}(Y_{k})$
 
 ## Estimation Results
 
