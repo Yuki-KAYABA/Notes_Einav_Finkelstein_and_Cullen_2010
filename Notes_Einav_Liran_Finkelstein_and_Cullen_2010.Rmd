@@ -1,0 +1,49 @@
+---
+title: "Notes Einav, Liran, Finkelstein and Cullen (2010) Estimating Welfare in Insurance Markets Using Variation in Prices"
+author: "Yuki KAYABA"
+date: "1/5/2023"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+#output_dir: docs
+#bookdown::gitbook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(bookdown)
+```
+
+# Summary of the Paper
+
+（ひとことメモ）
+
+- 
+
+## Motivation
+
+- 
+
+
+## Related Literature
+
+- 
+
+## Contribution
+
+- 
+
+# Details of the Paper
+
+## Model
+
+
+
+## Estimation
+
+
+## Estimation Results
+
+
+## Counterfactual Simulations
+
