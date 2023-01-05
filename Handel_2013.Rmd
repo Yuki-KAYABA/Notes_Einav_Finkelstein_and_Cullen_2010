@@ -135,17 +135,38 @@ $$
 
 - Estimate the choice model using a random coefficients simulated maximum likelihood approach similar to that summarized in Train (2009)
 - The likelihood function at the family level is computed for a sequence of choices from $t_{0}$ to $t_{2}$, since inertia implies that the likelihood of a choice made in the current period depends on the previous choice
+- See online appendix B in more detail
 
 ## Estimation Results
 
+- See Table 5 in this paper
+- Inertia is substantial, whose mean is $2,032
 
+## Counterfactual Simulations
 
+- Conduct counterfactual analysis to study the welfare consequences of reduced inertia in the following settings
+  - a "naive" setting where the price of insurance does not change as a consequence of incremental selection
+  - a "sophisticated" setting where plan prices change to reflect the new risk profile of employees enrolled in the different options
 
+### Model of Reduced Inertia and Plan Pricing
 
+- Assume the policy being implemented reduces inertia to a fraction $Z$ of the family-specific estimate $\eta_{k}$
+- The expected utility of family $k$ for plan $j$ at time $t$ is
 
+$$
+U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \hat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
+$$
 
+- Next, we model insurance plan pricing, following the pricing rule used by the firm during the time period studied
+- The total premium paid by employer and employee, $TP^{y}_{jt}$, for each plan and year was set as the average plan cost for that plan's previous year of enrollees, plus an administrative markup, conditional on the dependent coverage tier denoted $y$:
 
+$$
+TP^{y}_{jt} = AC_{\mathcal{K}^{y}_{j, t-1}} + L = \frac{1}{\|\mathcal{K}^{y}_{j, t-1}\|}\sum_{k \in \mathcal{K}^{y}_{j, t-1}}PP_{kj, t-1} + L
+$$
 
+- $\mathcal{K}^{y}_{j, t-1}$ refers to the population of families in plan $j$ at time $t−1$ in coverage tier $y$
+- $PP_{kj, t−1}$ is the total plan paid in medical expenditures conditional on $y$ and $j$ at $t − 1$
+- $TP^{y}_{jt}$ is the amount an employee in dependent category $y$ enrolling in plan $j$ would have to pay each year if they received no health insurance subsidy from the firm
 
 
 

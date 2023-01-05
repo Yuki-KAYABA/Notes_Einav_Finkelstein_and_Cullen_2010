@@ -85,6 +85,10 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation"><i class="fa fa-check"></i><b>2.3</b> Estimation</a></li>
 <li class="chapter" data-level="2.4" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation-results"><i class="fa fa-check"></i><b>2.4</b> Estimation Results</a></li>
+<li class="chapter" data-level="2.5" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#counterfactual-simulations"><i class="fa fa-check"></i><b>2.5</b> Counterfactual Simulations</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model-of-reduced-inertia-and-plan-pricing"><i class="fa fa-check"></i><b>2.5.1</b> Model of Reduced Inertia and Plan Pricing</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -211,10 +215,47 @@ x = W_{k} - P_{kjt} - OOP + \eta(\mathbf{X}^{B}_{kt}, Y_{k})1_{kj, t-1} + \delta
 <ul>
 <li>Estimate the choice model using a random coefficients simulated maximum likelihood approach similar to that summarized in Train (2009)</li>
 <li>The likelihood function at the family level is computed for a sequence of choices from <span class="math inline">\(t_{0}\)</span> to <span class="math inline">\(t_{2}\)</span>, since inertia implies that the likelihood of a choice made in the current period depends on the previous choice</li>
+<li>See online appendix B in more detail</li>
 </ul>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>See Table 5 in this paper</li>
+<li>Inertia is substantial, whose mean is $2,032</li>
+</ul>
+</div>
+<div id="counterfactual-simulations" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Counterfactual Simulations<a href="details-of-the-paper.html#counterfactual-simulations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Conduct counterfactual analysis to study the welfare consequences of reduced inertia in the following settings
+<ul>
+<li>a “naive” setting where the price of insurance does not change as a consequence of incremental selection</li>
+<li>a “sophisticated” setting where plan prices change to reflect the new risk profile of employees enrolled in the different options</li>
+</ul></li>
+</ul>
+<div id="model-of-reduced-inertia-and-plan-pricing" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Model of Reduced Inertia and Plan Pricing<a href="details-of-the-paper.html#model-of-reduced-inertia-and-plan-pricing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Assume the policy being implemented reduces inertia to a fraction <span class="math inline">\(Z\)</span> of the family-specific estimate <span class="math inline">\(\eta_{k}\)</span></li>
+<li>The expected utility of family <span class="math inline">\(k\)</span> for plan <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+U_{kjt}(P_{kjt}, Z\eta_{k}, 1_{kj, t-1}) = \int^{\infty}_{0} f_{kjt}(OOP)u_{k}(OOP, \hat{P_{kjt}}, Z\eta_{k}, 1_{kj, t-1})dOOP,
+\]</span></p>
+<ul>
+<li>Next, we model insurance plan pricing, following the pricing rule used by the firm during the time period studied</li>
+<li>The total premium paid by employer and employee, <span class="math inline">\(TP^{y}_{jt}\)</span>, for each plan and year was set as the average plan cost for that plan’s previous year of enrollees, plus an administrative markup, conditional on the dependent coverage tier denoted <span class="math inline">\(y\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+TP^{y}_{jt} = AC_{\mathcal{K}^{y}_{j, t-1}} + L = \frac{1}{\|\mathcal{K}^{y}_{j, t-1}\|}\sum_{k \in \mathcal{K}^{y}_{j, t-1}}PP_{kj, t-1} + L
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\mathcal{K}^{y}_{j, t-1}\)</span> refers to the population of families in plan <span class="math inline">\(j\)</span> at time <span class="math inline">\(t−1\)</span> in coverage tier <span class="math inline">\(y\)</span></li>
+<li><span class="math inline">\(PP_{kj, t−1}\)</span> is the total plan paid in medical expenditures conditional on <span class="math inline">\(y\)</span> and <span class="math inline">\(j\)</span> at <span class="math inline">\(t − 1\)</span></li>
+<li><span class="math inline">\(TP^{y}_{jt}\)</span> is the amount an employee in dependent category <span class="math inline">\(y\)</span> enrolling in plan <span class="math inline">\(j\)</span> would have to pay each year if they received no health insurance subsidy from the firm</li>
+</ul>
+</div>
 </div>
 </div>
             </section>
