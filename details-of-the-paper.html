@@ -101,6 +101,19 @@
 <h1><span class="header-section-number">2</span> Details of the Paper<a href="details-of-the-paper.html#details-of-the-paper" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="model" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Model<a href="details-of-the-paper.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Setup and Notation</strong></p>
+<ul>
+<li>Consumers choose from two available insurance contracts:
+<ul>
+<li>Contract <span class="math inline">\(H\)</span>, full insurance with price <span class="math inline">\(p\)</span></li>
+<li>Contract <span class="math inline">\(L\)</span>, no insurance available for free</li>
+</ul></li>
+<li>Characteristics of the insurance contracts as given, although we allow the price of insurance to be determined endogenously</li>
+<li><span class="math inline">\(G(\zeta)\)</span>: distribution of the population, where <span class="math inline">\(\zeta\)</span> is a vector of consumer characteristics</li>
+<li><span class="math inline">\(v^{H}(\zeta_{i}, p)\)</span>, <span class="math inline">\(v^{L}(\zeta_{i})\)</span>: consumer <span class="math inline">\(i\)</span>’s (with characteristics) utility from buying contracts <span class="math inline">\(H\)</span> and <span class="math inline">\(L\)</span>, respectively</li>
+<li>Assume that <span class="math inline">\(v^{H}(\zeta_{i}, p)\)</span> is strictly decreasing in <span class="math inline">\(p\)</span> and that <span class="math inline">\(v^{H}(\zeta_{i}, p = 0) &gt; v^{L}(\zeta_{i})\)</span></li>
+</ul>
+<p><strong>Demand for Insurance</strong></p>
 </div>
 <div id="estimation" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Estimation<a href="details-of-the-paper.html#estimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -169,6 +182,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
