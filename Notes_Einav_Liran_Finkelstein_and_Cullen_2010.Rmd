@@ -1,5 +1,5 @@
 ---
-title: "Notes Einav, Liran, Finkelstein and Cullen (2010) Estimating Welfare in Insurance Markets Using Variation in Prices"
+title: "Notes: Einav, Liran, Finkelstein and Cullen (2010) Estimating Welfare in Insurance Markets Using Variation in Prices"
 author: "Yuki KAYABA"
 date: "1/5/2023"
 site: bookdown::bookdown_site
@@ -44,7 +44,7 @@ library(bookdown)
 
 ## Model
 
-**Setup and Notation**
+### Setup and Notation
 
 - Consumers choose from two available insurance contracts: 
   - Contract $H$, full insurance with price $p$
@@ -53,8 +53,46 @@ library(bookdown)
 - $G(\zeta)$: distribution of the population, where $\zeta$ is a vector of consumer characteristics
 - $v^{H}(\zeta_{i}, p)$, $v^{L}(\zeta_{i})$: consumer $i$'s (with characteristics) utility from buying contracts $H$ and $L$, respectively
 - Assume that $v^{H}(\zeta_{i}, p)$ is strictly decreasing in $p$ and that $v^{H}(\zeta_{i}, p = 0) > v^{L}(\zeta_{i})$
+- $c(\zeta_{i})$: the expected monetary cost associated with the insurable risk for individual $i$
 
-**Demand for Insurance**
+### Demand for Insurance
+
+- Each individual makes a discrete choice of whether to buy insurance or not
+- Assume that firms cannot offer different prices to different individuals
+- Then, individual $i$ chooses to buy insurance if and only if $v^{H}(\zeta_{i}, p) \geq v^{L}(\zeta_{i})$
+- Define $\pi(\zeta_{i}) \equiv \max \{ p: v^{H}(\zeta_{i}, p) \geq v^{L}(\zeta_{i}) \}$
+- Aggregate demand for insurance is therefore given by:
+
+$$
+D(p) = \int 1(\pi(\zeta) \geq p)dG(\zeta) = \Pr(\pi(\zeta_{i}) \geq p)
+$$
+
+- Assume that $D(p)$ is strictly decreasing, continuous, and differentiable
+
+### Supply and Equilibrium
+
+- Consider $N \geq 2$ identical risk-neutral insurance providers, who set prices in a Nash equilibrium
+- Assume that when multiple firms set the same price, individuals who decide to purchase insurance at this price choose a firm randomly
+- Assume that the only costs of providing contract $H$ to individual $i$ are the insurable cost $c(\zeta_{i})$
+- The above assumptions imply that at the average (expected) cost curve in the market:
+
+$$
+AC(p) = \frac{1}{D(p)} \int c(\zeta)1(\pi(\zeta) \geq p)dG(\zeta) = E(c(\zeta) \mid \pi(\zeta) \geq p)
+$$
+
+- The marginal (expected) cost curve in the market
+
+$$
+MC(p) = E(c(\zeta) \mid \pi(\zeta) = p)
+$$
+
+Add two further simplifying assumptions to straightforwardly characterize equilibrium.
+
+- Assume that there exists a price $\overline{p}$ such that $D(\overline{p}) > 0$ and $MC(p) < p$ for every $p > \overline{p}$
+  - In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it
+- Assume that if there exists such that $MC(\underline{p}) > \underline{p}$, then $MC(p) > p$ for all $p < \underline{p}$. 
+  - That is, we assume that $MC(p)$ crosses the demand curve at most once
+
 
 ## Estimation
 
