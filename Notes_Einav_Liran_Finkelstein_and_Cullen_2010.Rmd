@@ -88,10 +88,17 @@ $$
 
 Add two further simplifying assumptions to straightforwardly characterize equilibrium.
 
-- Assume that there exists a price $\overline{p}$ such that $D(\overline{p}) > 0$ and $MC(p) < p$ for every $p > \overline{p}$
+1. Assume that there exists a price $\overline{p}$ such that $D(\overline{p}) > 0$ and $MC(p) < p$ for every $p > \overline{p}$
   - In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it
-- Assume that if there exists such that $MC(\underline{p}) > \underline{p}$, then $MC(p) > p$ for all $p < \underline{p}$. 
+2. Assume that if there exists $\underline{p}$ such that $MC(\underline{p}) > \underline{p}$, then $MC(p) > p$ for all $p < \underline{p}$. 
   - That is, we assume that $MC(p)$ crosses the demand curve at most once
+
+- These assumptions guarantee the easy to verify that these assumptions guarantee the existence and uniqueness of equilibrium
+- In particular, the equilibrium is characterized by the lowest break-even price, that is,
+
+$$
+p^{*} = \min \{ p: p = AC(p) \}
+$$
 
 
 ## Estimation
