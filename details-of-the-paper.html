@@ -156,22 +156,18 @@ MC(p) = E(c(\zeta) \mid \pi(\zeta) = p)
 \]</span></p>
 <p>Add two further simplifying assumptions to straightforwardly characterize equilibrium.</p>
 <ol style="list-style-type: decimal">
-<li>Assume that there exists a price <span class="math inline">\(\overline{p}\)</span> such that <span class="math inline">\(D(\overline{p}) &gt; 0\)</span> and <span class="math inline">\(MC(p) &lt; p\)</span> for every <span class="math inline">\(p &gt; \overline{p}\)</span></li>
+<li>Assume that there exists a price <span class="math inline">\(\overline{p}\)</span> such that <span class="math inline">\(D(\overline{p}) &gt; 0\)</span> and <span class="math inline">\(MC(p) &lt; p\)</span> for every <span class="math inline">\(p &gt; \overline{p}\)</span>. In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li>Assume that if there exists <span class="math inline">\(\underline{p}\)</span> such that <span class="math inline">\(MC(\underline{p}) &gt; \underline{p}\)</span>, then <span class="math inline">\(MC(p) &gt; p\)</span> for all <span class="math inline">\(p &lt; \underline{p}\)</span>.
+That is, we assume that <span class="math inline">\(MC(p)\)</span> crosses the demand curve at most once<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
 </ol>
 <ul>
-<li>In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Assume that if there exists <span class="math inline">\(\underline{p}\)</span> such that <span class="math inline">\(MC(\underline{p}) &gt; \underline{p}\)</span>, then <span class="math inline">\(MC(p) &gt; p\)</span> for all <span class="math inline">\(p &lt; \underline{p}\)</span>.</li>
-</ol>
-<ul>
-<li><p>That is, we assume that <span class="math inline">\(MC(p)\)</span> crosses the demand curve at most once</p></li>
-<li><p>These assumptions guarantee the easy to verify that these assumptions guarantee the existence and uniqueness of equilibrium</p></li>
-<li><p>In particular, the equilibrium is characterized by the lowest break-even price, that is,</p></li>
+<li>These assumptions guarantee the easy to verify that these assumptions guarantee the existence and uniqueness of equilibrium</li>
+<li>In particular, the equilibrium is characterized by the lowest break-even price, that is,</li>
 </ul>
 <p><span class="math display">\[
 p^{*} = \min \{ p: p = AC(p) \}
-\]</span></p>
+\]</span>
+<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 </div>
 </div>
 <div id="estimation" class="section level2 hasAnchor" number="2.2">
@@ -183,6 +179,28 @@ p^{*} = \min \{ p: p = AC(p) \}
 <div id="counterfactual-simulations" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Counterfactual Simulations<a href="details-of-the-paper.html#counterfactual-simulations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><span class="math inline">\(\pi(\zeta_{i}) = p\)</span>なるmarginal consumerを考えたとき、当然<span class="math inline">\(\pi(\zeta_{i}) \geq p)\)</span>を満たすので<span class="math inline">\(H\)</span>を選択する。
+このとき、仮定1から<span class="math inline">\(p &gt; \overline{p}\)</span>について<span class="math inline">\(MC(p) &lt; p\)</span>であるため、<span class="math inline">\(p &gt; \overline{p}\)</span>におけるmarginal consumerは<span class="math inline">\(H\)</span>を選択し、かつ<span class="math inline">\(MC(p)\)</span>は<span class="math inline">\(p\)</span>より小さい。
+各<span class="math inline">\(p\)</span>についてmarginal consumerが複数いることはあり得るが（Footnote 3）、すべてのmarginal consumerについて上記が成立するので各<span class="math inline">\(p &gt; \overline{p}\)</span>についてmarket全体の需要量は<span class="math inline">\(MC(p)\)</span>を上回る。
+したがって、<span class="math inline">\(p &gt; \overline{p}\)</span>について<span class="math inline">\(D(p) &gt; MC(p)\)</span>。<a href="details-of-the-paper.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>仮定1と同様にmarginal consumerを考えているので<span class="math inline">\(H\)</span>を選択する。そのうえで、仮定2より、<span class="math inline">\(MC(\underline{p}) &gt; \underline{p}\)</span>なる<span class="math inline">\(\underline{p}\)</span>が存在する場合、<span class="math inline">\(p &lt; \underline{p}\)</span>について<span class="math inline">\(MC(p) &gt; p\)</span>が成立する。改定1より<span class="math inline">\(p &gt; \overline{p}\)</span>について<span class="math inline">\(D(p) &gt; MC(p)\)</span>が成立しており、仮定2の<span class="math inline">\(\underline{p}\)</span>が存在しない場合はすべての<span class="math inline">\(p\)</span>について<span class="math inline">\(D(p) &gt; MC(p)\)</span>となるため<span class="math inline">\(D(p)\)</span>と<span class="math inline">\(MC(p)\)</span>は1回も交差しない。<a href="details-of-the-paper.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>各企業は一律に価格を設定するため、平均費用をすべての消費者に課す。企業はベルトラン競争を行っており、価格が一律でない場合はナッシュ均衡が存在しない。すべての企業の価格が同一であり、利潤0となる<span class="math inline">\(p = AC(p)\)</span>がナッシュ均衡となる。<a href="details-of-the-paper.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

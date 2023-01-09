@@ -88,10 +88,16 @@ $$
 
 Add two further simplifying assumptions to straightforwardly characterize equilibrium.
 
-1. Assume that there exists a price $\overline{p}$ such that $D(\overline{p}) > 0$ and $MC(p) < p$ for every $p > \overline{p}$
-  - In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it
+1. Assume that there exists a price $\overline{p}$ such that $D(\overline{p}) > 0$ and $MC(p) < p$ for every $p > \overline{p}$. In words, we assume that it is profitable (and efficient, as we will see soon) to provide insurance to those with the highest willingness to pay for it[^1]
 2. Assume that if there exists $\underline{p}$ such that $MC(\underline{p}) > \underline{p}$, then $MC(p) > p$ for all $p < \underline{p}$. 
-  - That is, we assume that $MC(p)$ crosses the demand curve at most once
+That is, we assume that $MC(p)$ crosses the demand curve at most once[^2]
+
+[^1]:$\pi(\zeta_{i}) = p$なるmarginal consumerを考えたとき、当然$\pi(\zeta_{i}) \geq p)$を満たすので$H$を選択する。
+このとき、仮定1から$p > \overline{p}$について$MC(p) < p$であるため、$p > \overline{p}$におけるmarginal consumerは$H$を選択し、かつ$MC(p)$は$p$より小さい。
+各$p$についてmarginal consumerが複数いることはあり得るが（Footnote 3）、すべてのmarginal consumerについて上記が成立するので各$p >  \overline{p}$についてmarket全体の需要量は$MC(p)$を上回る。
+したがって、$p >  \overline{p}$について$D(p) > MC(p)$。
+
+[^2]:仮定1と同様にmarginal consumerを考えているので$H$を選択する。そのうえで、仮定2より、$MC(\underline{p}) > \underline{p}$なる$\underline{p}$が存在する場合、$p < \underline{p}$について$MC(p) > p$が成立する。改定1より$p >  \overline{p}$について$D(p) > MC(p)$が成立しており、仮定2の$\underline{p}$が存在しない場合はすべての$p$について$D(p) > MC(p)$となるため$D(p)$と$MC(p)$は1回も交差しない。
 
 - These assumptions guarantee the easy to verify that these assumptions guarantee the existence and uniqueness of equilibrium
 - In particular, the equilibrium is characterized by the lowest break-even price, that is,
@@ -99,6 +105,9 @@ Add two further simplifying assumptions to straightforwardly characterize equili
 $$
 p^{*} = \min \{ p: p = AC(p) \}
 $$
+[^3]
+
+[^3]:各企業は一律に価格を設定するため、平均費用をすべての消費者に課す。企業はベルトラン競争を行っており、価格が一律でない場合はナッシュ均衡が存在しない。すべての企業の価格が同一であり、利潤0となる$p = AC(p)$がナッシュ均衡となる。
 
 
 ## Estimation
