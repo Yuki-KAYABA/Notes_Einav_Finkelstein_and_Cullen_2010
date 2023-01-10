@@ -92,7 +92,7 @@ Add two further simplifying assumptions to straightforwardly characterize equili
 2. Assume that if there exists $\underline{p}$ such that $MC(\underline{p}) > \underline{p}$, then $MC(p) > p$ for all $p < \underline{p}$. 
 That is, we assume that $MC(p)$ crosses the demand curve at most once[^2]
 
-[^1]:$\pi(\zeta_{i}) = p$なるmarginal consumerを考えたとき、当然$\pi(\zeta_{i}) \geq p)$を満たすので$H$を選択する。
+[^1]:$\pi(\zeta_{i}) = p$なるmarginal consumerを考えたとき、当然$\pi(\zeta_{i}) \geq p$を満たすので$H$を選択する。
 このとき、仮定1から$p > \overline{p}$について$MC(p) < p$であるため、$p > \overline{p}$におけるmarginal consumerは$H$を選択し、かつ$MC(p)$は$p$より小さい。
 各$p$についてmarginal consumerが複数いることはあり得るが（Footnote 3）、すべてのmarginal consumerについて上記が成立するので各$p >  \overline{p}$についてmarket全体の需要量は$MC(p)$を上回る。
 したがって、$p >  \overline{p}$について$D(p) > MC(p)$。
@@ -106,13 +106,44 @@ $$
 p^{*} = \min \{ p: p = AC(p) \}
 $$
 
-
 [^3]:各企業は一律に価格を設定するため、平均費用をすべての消費者に課す。企業はベルトラン競争を行っており、価格が一律でない場合はナッシュ均衡が存在しない。すべての企業の価格が同一であり、利潤0となる$p = AC(p)$がナッシュ均衡となる。
 
 ## Measurig Welfare
 
 - Measure consumer surplus by _the certainty equivalent_.
+- The certainty equivalent of an uncertain outcome is the amount that would make an individual indifferent between obtaining this amount for sure and obtaining the uncertain outcome.
+- Denote by $e^{H}(\zeta_{i})$ and $e^{L}(\zeta_{i})$ the certainty equivalents for consumer $i$ of an allocation of contract $H$ and $L$, respectively. 
+- Under the assumption that all individuals are risk-averse, the willingness to pay for insurance in given by $\pi(\zeta_{i}) = e^{H}(\zeta_{i}) - e^{L}(\zeta_{i})$
+- Consumer welfare is given by:
 
+$$
+CS = \int [(e^{H}(\zeta) - p)1(\pi(\zeta_{i}) \geq p) + (e^{L}(\zeta) - p)1(\pi(\zeta_{i}) < p)]dG(\zeta)
+$$
+
+- Producer welfare is given by:
+
+$$
+PS = \int (p - c(\zeta))1(\pi(\zeta_{i}) \geq p)dG(\zeta)
+$$
+
+- Total welfare will then be given by:
+
+$$
+\begin{align}
+TS &= CS + PS \\
+&= \int [(e^{H}(\zeta) - c(\zeta))1(\pi(\zeta_{i}) \geq p) + e^{L}(\zeta)1(\pi(\zeta_{i}) < p)]dG(\zeta)
+\end{align}
+$$
+**Efficient Allocation**
+
+- It is socially efficient for individual $i$ to purchase insurance if and only if $\pi(\zeta_{i}) \geq c(\zeta_{i})$ (a first-best allocation)
+- However, achieving the first best may not be feasible if there are multiple individuals with different $c(\zeta_{i})$'s who all have the same willingness to pay for contract $H$, since price is the only instrument available to affect the insurance allocation
+- Therefore, it is useful to define a _constrained efficient allocation_ as the one that maximizes social welfare subject to the constraint that price is the only instrument available for screening
+- It is constrained efficient for individual $i$ to purchase contract $H$ if and only if
+
+$$
+\pi(\zeta_{i}) \geq E(c(\widetilde{\zeta}) \mid \pi(\widetilde{\zeta}) = \pi(\zeta_{i}))
+$$
 
 ## Estimation Results
 

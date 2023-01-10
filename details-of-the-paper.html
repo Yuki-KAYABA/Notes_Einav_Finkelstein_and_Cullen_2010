@@ -173,7 +173,39 @@ p^{*} = \min \{ p: p = AC(p) \}
 <h2><span class="header-section-number">2.2</span> Measurig Welfare<a href="details-of-the-paper.html#measurig-welfare" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Measure consumer surplus by <em>the certainty equivalent</em>.</li>
+<li>The certainty equivalent of an uncertain outcome is the amount that would make an individual indifferent between obtaining this amount for sure and obtaining the uncertain outcome.</li>
+<li>Denote by <span class="math inline">\(e^{H}(\zeta_{i})\)</span> and <span class="math inline">\(e^{L}(\zeta_{i})\)</span> the certainty equivalents for consumer <span class="math inline">\(i\)</span> of an allocation of contract <span class="math inline">\(H\)</span> and <span class="math inline">\(L\)</span>, respectively.</li>
+<li>Under the assumption that all individuals are risk-averse, the willingness to pay for insurance in given by <span class="math inline">\(\pi(\zeta_{i}) = e^{H}(\zeta_{i}) - e^{L}(\zeta_{i})\)</span></li>
+<li>Consumer welfare is given by:</li>
 </ul>
+<p><span class="math display">\[
+CS = \int [(e^{H}(\zeta) - p)1(\pi(\zeta_{i}) \geq p) + (e^{L}(\zeta) - p)1(\pi(\zeta_{i}) &lt; p)]dG(\zeta)
+\]</span></p>
+<ul>
+<li>Producer welfare is given by:</li>
+</ul>
+<p><span class="math display">\[
+PS = \int (p - c(\zeta))1(\pi(\zeta_{i}) \geq p)dG(\zeta)
+\]</span></p>
+<ul>
+<li>Total welfare will then be given by:</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+TS &amp;= CS + PS \\
+&amp;= \int [(e^{H}(\zeta) - c(\zeta))1(\pi(\zeta_{i}) \geq p) + e^{L}(\zeta)1(\pi(\zeta_{i}) &lt; p)]dG(\zeta)
+\end{align}
+\]</span>
+<strong>Efficient Allocation</strong></p>
+<ul>
+<li>It is socially efficient for individual <span class="math inline">\(i\)</span> to purchase insurance if and only if <span class="math inline">\(\pi(\zeta_{i}) \geq c(\zeta_{i})\)</span> (a first-best allocation)</li>
+<li>However, achieving the first best may not be feasible if there are multiple individuals with different <span class="math inline">\(c(\zeta_{i})\)</span>’s who all have the same willingness to pay for contract <span class="math inline">\(H\)</span>, since price is the only instrument available to affect the insurance allocation</li>
+<li>Therefore, it is useful to define a <em>constrained efficient allocation</em> as the one that maximizes social welfare subject to the constraint that price is the only instrument available for screening</li>
+<li>It is constrained efficient for individual <span class="math inline">\(i\)</span> to purchase contract <span class="math inline">\(H\)</span> if and only if</li>
+</ul>
+<p><span class="math display">\[
+\pi(\zeta_{i}) \geq E(c(\widetilde{\zeta}) \mid \pi(\widetilde{\zeta}) = \pi(\zeta_{i}))
+\]</span></p>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -196,7 +228,7 @@ p^{*} = \min \{ p: p = AC(p) \}
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p><span class="math inline">\(\pi(\zeta_{i}) = p\)</span>なるmarginal consumerを考えたとき、当然<span class="math inline">\(\pi(\zeta_{i}) \geq p)\)</span>を満たすので<span class="math inline">\(H\)</span>を選択する。
+<li id="fn1"><p><span class="math inline">\(\pi(\zeta_{i}) = p\)</span>なるmarginal consumerを考えたとき、当然<span class="math inline">\(\pi(\zeta_{i}) \geq p\)</span>を満たすので<span class="math inline">\(H\)</span>を選択する。
 このとき、仮定1から<span class="math inline">\(p &gt; \overline{p}\)</span>について<span class="math inline">\(MC(p) &lt; p\)</span>であるため、<span class="math inline">\(p &gt; \overline{p}\)</span>におけるmarginal consumerは<span class="math inline">\(H\)</span>を選択し、かつ<span class="math inline">\(MC(p)\)</span>は<span class="math inline">\(p\)</span>より小さい。
 各<span class="math inline">\(p\)</span>についてmarginal consumerが複数いることはあり得るが（Footnote 3）、すべてのmarginal consumerについて上記が成立するので各<span class="math inline">\(p &gt; \overline{p}\)</span>についてmarket全体の需要量は<span class="math inline">\(MC(p)\)</span>を上回る。
 したがって、<span class="math inline">\(p &gt; \overline{p}\)</span>について<span class="math inline">\(D(p) &gt; MC(p)\)</span>。<a href="details-of-the-paper.html#fnref1" class="footnote-back">↩︎</a></p></li>
