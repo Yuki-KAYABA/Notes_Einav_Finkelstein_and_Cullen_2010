@@ -145,7 +145,26 @@ $$
 \pi(\zeta_{i}) \geq E(c(\widetilde{\zeta}) \mid \pi(\widetilde{\zeta}) = \pi(\zeta_{i}))
 $$
 
-## Estimation Results
+## Graphical Representation
+
+### Adverse Selection
+
+- See Figure 1 of the paper
+- The individuals who have the highest willingness to pay for insurance are those who, on average, have the highest expected costs
+- This is represented by downward-sloping $MC$ curve
+- $AC$ curve is also downward-sloping, and always above $MC$ curve[^4]
+- Because average costs are always higher than marginal costs, adverse selection creates underinsurance
+
+[^4]:Adverse Selectionでは、（グラフの左側に位置する）WTPが高い消費者ほど（期待）コストが高いため、$AC > MC$となる。
+
+### Advantageous Selection
+
+- See Figure 2 of the paper
+- Those with more insurance have lower average costs than those with less or no insurance
+- $MS$ and $AC$ curve is upward-sloping, and $AC$ is below $MC$[^5]
+- Because average costs are always higher than marginal costs, adverse selection creates overinsurance
+
+[^5]:Advantageous Selectionでは、（グラフの左側に位置する）WTPが高い消費者ほど（期待）コストが低いため、$AC < MC$となる。
 
 
 ## Counterfactual Simulations
