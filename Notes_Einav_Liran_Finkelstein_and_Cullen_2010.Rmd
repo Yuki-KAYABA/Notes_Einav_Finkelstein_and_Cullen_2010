@@ -161,11 +161,14 @@ $$
 
 - See Figure 2 of the paper
 - Those with more insurance have lower average costs than those with less or no insurance
-- $MS$ and $AC$ curve is upward-sloping, and $AC$ is below $MC$[^5]
+- $MC$ and $AC$ curve is upward-sloping, and $AC$ is below $MC$[^5]
 - Because average costs are always higher than marginal costs, adverse selection creates overinsurance
 
 [^5]:Advantageous Selectionでは、（グラフの左側に位置する）WTPが高い消費者ほど（期待）コストが低いため、$AC < MC$となる。
 
 
-## Counterfactual Simulations
+## Sufficient Statistics for Welfare Analysis
+
+- The demand and cost curves are sufficient statistics for welfare analysis of equilibrium and nonequilibrium pricing of existing contracts
+- Different underlying primitives (i.e., preferences and private information, as summarized by $\zeta$) have the same welfare implications if they generate the same demand and cost curves
 
