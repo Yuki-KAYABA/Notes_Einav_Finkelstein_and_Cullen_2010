@@ -100,17 +100,18 @@ That is, we assume that $MC(p)$ crosses the demand curve at most once[^2]
 [^2]:仮定1と同様にmarginal consumerを考えているので$H$を選択する。そのうえで、仮定2より、$MC(\underline{p}) > \underline{p}$なる$\underline{p}$が存在する場合、$p < \underline{p}$について$MC(p) > p$が成立する。改定1より$p >  \overline{p}$について$D(p) > MC(p)$が成立しており、仮定2の$\underline{p}$が存在しない場合はすべての$p$について$D(p) > MC(p)$となるため$D(p)$と$MC(p)$は1回も交差しない。
 
 - These assumptions guarantee the easy to verify that these assumptions guarantee the existence and uniqueness of equilibrium
-- In particular, the equilibrium is characterized by the lowest break-even price, that is,
+- In particular, the equilibrium is characterized by the lowest break-even price, that is, [^3]
 
 $$
 p^{*} = \min \{ p: p = AC(p) \}
 $$
-[^3]
+
 
 [^3]:各企業は一律に価格を設定するため、平均費用をすべての消費者に課す。企業はベルトラン競争を行っており、価格が一律でない場合はナッシュ均衡が存在しない。すべての企業の価格が同一であり、利潤0となる$p = AC(p)$がナッシュ均衡となる。
 
+## Measurig Welfare
 
-## Estimation
+- Measure consumer surplus by _the certainty equivalent_.
 
 
 ## Estimation Results
