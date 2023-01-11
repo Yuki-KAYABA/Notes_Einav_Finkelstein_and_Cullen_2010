@@ -18,7 +18,8 @@ library(bookdown)
 
 （ひとことメモ）
 
-- 
+- 保険マーケットにおいて生じる非効率性を（ミクロ経済学の授業で扱うような）消費者理論・生産者理論のフレームワークで視覚的に説明。
+- 特に、Adverse Selection、Advantageous Selectionそれぞれのケースにおいて、$MC$の傾きが異なる（Adverse Selectionの場合右下がり、Advantageous Selectionの場合右上がり）となることを示した。
 
 ## Motivation
 
@@ -40,7 +41,7 @@ library(bookdown)
 - Propose a complementary approach to empirical welfare analysis in insurance markets
 - Make fewer assumptions about the underlying primitives, yet impose enough structure to allow meaningful welfare analysis
 
-# Details of the Paper
+# Details of the Paper (Theoretical Part)
 
 ## Model
 
@@ -170,5 +171,18 @@ $$
 ## Sufficient Statistics for Welfare Analysis
 
 - The demand and cost curves are sufficient statistics for welfare analysis of equilibrium and nonequilibrium pricing of existing contracts
-- Different underlying primitives (i.e., preferences and private information, as summarized by $\zeta$) have the same welfare implications if they generate the same demand and cost curves
+- Different underlying primitives (i.e., preferences and private information, as summarized by $\zeta$) have the same welfare implications if they generate the same demand and cost curves[^6]
+
+[^6]:上記の通り、需要関数と費用関数さえ推定できればWelfare Lossを推定できるので、両者の元となるPrimitives（Source of Selectionなど）はWelfare Lossを推定するだけであれば不要。
+
+## Incorporating Moral Hazard
+
+- 
+
+
+# Details of the Paper (Empirical Part)
+
+- 
+
+
 
